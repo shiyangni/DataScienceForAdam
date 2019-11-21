@@ -1,0 +1,1 @@
+window.advBidxc.doRefresh({"1270825582":true});

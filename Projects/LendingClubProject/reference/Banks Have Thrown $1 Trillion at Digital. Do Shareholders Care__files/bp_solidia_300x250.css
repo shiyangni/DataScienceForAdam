@@ -1,0 +1,354 @@
+#mc {
+	top: 0;
+	left: 0px;
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	background-color: blue;
+	overflow: hidden;
+}
+
+#mc #bgExit {
+	width: 300px;
+	height: 250px;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+	background: transparent;
+	cursor: pointer;
+	text-indent: -9999px;
+	z-index: 15000;
+}
+
+#mc #border {
+	border: 1px solid #666;
+	width: 298px;
+	height: 248px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1200;
+}
+
+#mc #loading { 
+	background-color: white;
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 10000;
+}
+
+#mc #bkg_solid {
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 250px;
+	background-color: white;
+	position: absolute;
+}
+
+.fix_shake {
+	-webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+	transform:rotateZ(0.001deg);
+}
+
+#mc .hide{
+	display: none;
+}
+
+/* BACKGROUND ELEMENTS */
+#mc .sprite_pos{
+	top: 0;left: 0;position: absolute;
+}
+#mc #t1 {
+	width: 300px;height: 250px;
+	background: transparent url("img/bp_castrolFlowers_t1.svg") no-repeat;
+	-webkit-background-size: 300px 250px;
+	     -o-background-size: 300px 250px;
+	        background-size: 300px 250px;
+}
+
+#mc #t2 {
+	width: 300px;height: 250px;
+	background: transparent url("img/bp_castrolFlowers_t2.svg") no-repeat;
+	-webkit-background-size: 300px 250px;
+	     -o-background-size: 300px 250px;
+	        background-size: 300px 250px;
+}
+
+#mc #t3 {
+	width: 300px;height: 250px;
+	background: transparent url("img/bp_castrolFlowers_t3.svg") no-repeat;
+	-webkit-background-size: 300px 250px;
+	     -o-background-size: 300px 250px;
+	        background-size: 300px 250px;
+}
+
+#mc #bp_disclaimer {
+	width: 300px;height: 250px;top: 0px;left: 0px;position: absolute;z-index: 1500;
+	background: transparent url("img/bp_ev_disclaimer.svg") no-repeat;
+	-webkit-background-size: 300px 250px;
+	     -o-background-size: 300px 250px;
+	        background-size: 300px 250px;
+	z11: ;
+}
+
+#mc #t3_skewCont_top #t3{
+	top: 0;left: -17px;
+}
+
+#mc #t3_skewCont_bot #t3{
+	top: -94px; left: 180px;
+}
+
+#mc #cta_txt {
+	width: 353px;height: 54px;top: -16px;left: -96px;position: absolute;
+	background: transparent url("img/bp_keepAdvancing_CTA.svg") 0 0 no-repeat;
+
+	/*FOR SVG ELEMENTS */
+	-webkit-background-size: 353px 54px;
+	     -o-background-size: 353px 54px;
+	        background-size: 353px 54px;
+}
+
+#mc .logo_dim{
+	width: 300px;height: 250px;top: 0;left: 0;position: absolute;
+	-webkit-background-size: 300px 250px;
+	     -o-background-size: 300px 250px;
+	        background-size: 300px 250px;
+}
+
+#mc #bp_helios_green {
+	background: transparent url("img/bp_greenLogo.svg") 0 0 no-repeat;
+	z-index: 1000;
+}
+
+#mc #bp_helios_yellow {
+	background: transparent url("img/bp_yellowLogo.svg") 0 0 no-repeat;
+	z-index: 1020;
+}
+
+#mc .img_dim {
+	width: 300px;height: 250px;top: 0px;position: absolute;
+}
+
+#mc .img1_load{
+	background: transparent url("img/bp_castrol_img1.jpg") no-repeat;
+	width: 300px;height: 250px;top: 0;position: absolute;
+}
+
+#mc #img1_bot{
+	left: 166px;background-position: 0px -125px;
+}
+
+#mc .img2_load{
+	background: transparent url("img/bp_castrol_img2.jpg") no-repeat;
+	width: 300px;height: 250px;top: 0;position: absolute;
+}
+
+#mc #img2_bot{
+	left: 166px;background-position: 0px -125px;
+}
+
+#mc .top_img_cont{
+	width: 470px;height: 126px;top: 0px;left: -34px;position: absolute;overflow: hidden;
+	-webkit-transform:skew(29deg);
+	     -o-transform:skew(29deg);
+	        transform:skew(29deg);
+	        overflow: hidden;;;;
+}
+
+#mc .bot_img_cont{
+
+	width: 567px;height: 126px;top: 124px;left: -131px;position: absolute;overflow: hidden;
+	-webkit-transform:skew(-29deg);
+	     -o-transform:skew(-29deg);
+	        transform:skew(-29deg);
+	        overflow: hidden;;;
+}
+
+/* T3 Skew Containerss */
+#mc #t3_skewCont_top{
+	width: 403px;height: 90px;top: 0px;left: -44px;position: absolute;overflow: hidden;
+	-webkit-transform:skew(29deg);
+	     -o-transform:skew(29deg);
+	        transform:skew(29deg);
+	        overflow: hidden;
+	/*background-color: red;;;*/
+}
+
+#mc #t3_skewCont_bot{
+
+	width: 567px;height: 126px;top: 94px;left: -215px;position: absolute;overflow: hidden;
+	-webkit-transform:skew(-29deg);
+	     -o-transform:skew(-29deg);
+	        transform:skew(-29deg);
+
+	/*background-color: aquamarine;*/
+
+	overflow: hidden;
+}
+
+/* CHEVRONS */
+#mc .chevron_yellow_cta{
+	background: transparent url("img/BP_chev_yellow_cta.svg") 0 0 no-repeat;
+	width: 675px;height: 250px; position: absolute;
+	/*background: transparent url("img/bp_chevrons.svg") 0 0 no-repeat;*/
+
+	/*FOR SVG ELEMENTS */
+	-webkit-background-size: 675px 250px;
+	     -o-background-size: 675px 250px;
+	        background-size: 675px 250px;
+}
+
+#mc .chevron_yellow{
+	background: transparent url("img/BP_chev_yellow.svg") 0 0 no-repeat;
+	width: 675px;height: 250px; position: absolute;
+	/*background: transparent url("img/bp_chevrons.svg") 0 0 no-repeat;*/
+
+	/*FOR SVG ELEMENTS */
+	-webkit-background-size: 675px 250px;
+	     -o-background-size: 675px 250px;
+	        background-size: 675px 250px;
+}
+
+#mc .chevron_dkGreen{
+	background: transparent url("img/BP_chev_dkGreen.svg") 0 0 no-repeat;
+	width: 675px;height: 250px; position: absolute;
+	/*background: transparent url("img/bp_chevrons.svg") 0 0 no-repeat;*/
+
+	/*FOR SVG ELEMENTS */
+	-webkit-background-size: 675px 250px;
+	     -o-background-size: 675px 250px;
+	        background-size: 675px 250px;
+}
+
+#mc .chevron_ltGreen{
+	background: transparent url("img/BP_chev_ltGreen.svg") 0 0 no-repeat;
+	width: 675px;height: 250px; position: absolute;
+	/*background: transparent url("img/bp_chevrons.svg") 0 0 no-repeat;*/
+
+	/*FOR SVG ELEMENTS */
+	-webkit-background-size: 675px 250px;
+	     -o-background-size: 675px 250px;
+	        background-size: 675px 250px;
+}
+
+#mc .chevron_white{
+	background: transparent url("img/BP_chev_white.svg") 0 0 no-repeat;
+	width: 675px;height: 250px; position: absolute;
+	/*background: transparent url("img/bp_chevrons.svg") 0 0 no-repeat;*/
+
+	/*FOR SVG ELEMENTS */
+	-webkit-background-size: 675px 250px;
+	     -o-background-size: 675px 250px;
+	        background-size: 675px 250px;
+}
+
+/* CONTAINERS */
+#mc .main_top_img_cont{
+	width: 300px;height: 250px;top: 0;left: 0px;position: absolute;
+}
+
+#mc #cta_cont{
+	width: 229px;height: 20px;top: 201px;left: 100px;position: absolute;overflow: hidden;
+}
+
+
+#mc .skew_back{
+	-webkit-transform:skew(-29deg);
+	     -o-transform:skew(-29deg);
+	        transform:skew(-29deg);
+}
+
+#mc .skew_forward{
+	-webkit-transform:skew(29deg);
+	     -o-transform:skew(29deg);
+	        transform:skew(29deg);
+}
+
+/* GRADIENT */
+#mc #grad{
+	width: 300px;height: 250px;	top: -275px;left: 0;position: absolute;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+58,1+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 58%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 58%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 58%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* TEXT 1 CHEVS */
+#mc #chevron_1{top: -105px;left: -312px;}
+#mc #chevron_2{top: -90px;left: -291px;}
+#mc #chevron_3{top: -76px;left: -306px;}
+/* TEXT 2 CHEVS */
+#mc #chevron_4{top: -90px;left: -289px;}
+#mc #chevron_5{top: -107px;left: -291px;}
+#mc #chevron_6{top: -76px;left: -310px;}
+/* TEXT 3 CHEVS */
+#mc #chevron_7{top: 15px;left: -24px;}
+#mc #chevron_8{top: 66px;left: 15px;}
+#mc #chevron_9{top: 94px;left: -88px;}
+#mc #chevron_10{top: 24px;left: 69px;}
+
+/* ARROW EXPLOSION */
+#mc #arrow_explosion{left: -285px;position: absolute;}
+#mc #ae_1{top: -100px;left: 120px;position: absolute;}
+#mc #ae_2{top: 46px;left: -140px;position: absolute;}
+#mc #ae_3{top: 10px;left: 20px;position: absolute;}
+#mc #ae_4{top: 110px;left: 120px;position: absolute;}
+#mc #ae_5{top: -30px;left: 136px;position: absolute;}
+/*#mc #ae_6{top: 150px;left: 160px;position: absolute;}*/
+#mc #ae_7{top: -100px;left: 0px;position: absolute;}
+#mc #ae_8{top: 20px;left: 0px;position: absolute;}
+#mc #ae_9{top: 83px;left: -80px;position: absolute;}
+#mc #ae_10{top: 140px;left: 180px;position: absolute;}
+#mc #ae_11{top: -23px;left: 110px;position: absolute;}
+#mc #ae_12{top: 200px;left: 0px;position: absolute;}
+#mc #ae_13{top: 100px;left: -70px;position: absolute;}
+#mc #ae_14{top: -110px;left: 40px;position: absolute;}
+#mc #ae_15{top: 45px;left: 251px;position: absolute;}
+/*#mc #ae_16{top: 145px;left: 70px;position: absolute;}*/
+#mc #ae_17{top: -110px;left: -30px;position: absolute;}
+#mc #ae_18{top: -80px;left: 0px;position: absolute;}
+#mc #ae_19{top: 20px;left: 80px;position: absolute;}
+#mc #ae_20{top: -75px;left: 230px;position: absolute;}
+#mc #ae_21{top: 110px;left: 90px;position: absolute;}
+#mc #ae_22{top: 91px;left: 210px;position: absolute;}
+#mc #ae_23{top: 22px;left: 230px;position: absolute;}
+#mc #ae_24{top: 40px;left: 0px;position: absolute;}
+/*#mc #ae_25{top: 128px;left: -15px;position: absolute;}*/
+#mc #ae_26{top: -93px;left: -70px;position: absolute;}
+#mc #ae_27{top: -60px;left: 300px;position: absolute;}
+#mc #ae_28{top: 130px;left: -14px;position: absolute;}
+#mc #ae_29{top: 180px;left: 110px;position: absolute;}
+#mc #ae_30{top: 40px;left: 140px;position: absolute;}
+
+/* CTA CHEVRONS */
+#mc #cta_wedge{top: 87px;left: 305px;position: absolute;}
+#mc .cta_chev{
+	top: 4px; position: absolute;
+}
+
+#mc #cta_chev_1{
+	left: 4px;
+}
+
+#mc #cta_chev_2{
+	left: 13px;
+}
+
+#mc #cta_chev_3{
+	left: 22px;
+}

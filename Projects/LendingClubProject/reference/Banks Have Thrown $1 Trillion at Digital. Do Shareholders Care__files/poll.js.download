@@ -1,0 +1,47 @@
+digestPoll( {
+	 "poll":{
+		 "id":"154704",
+		 "question":"How would you rate HSBC in terms of being a thought-leader in the commercial banking space?",
+		 "answers":{
+		 "allowed":"1",
+		 "order":"F",
+		 "answer":[
+			 {
+				 "id":"1052384",
+				 "locked":"false",
+				 "mx":"false",
+				 "posresp":"true",
+				 "text":"Very High"
+			 },
+			 {
+				 "id":"1052385",
+				 "locked":"false",
+				 "mx":"false",
+				 "posresp":"true",
+				 "text":"High"
+			 },
+			 {
+				 "id":"1052386",
+				 "locked":"false",
+				 "mx":"false",
+				 "posresp":"false",
+				 "text":"Average"
+			 },
+			 {
+				 "id":"1052387",
+				 "locked":"false",
+				 "mx":"false",
+				 "posresp":"false",
+				 "text":"Low"
+			 },
+			 {
+				 "id":"1052388",
+				 "locked":"false",
+				 "mx":"false",
+				 "posresp":"false",
+				 "text":"Very Low"
+			 }
+			 ]
+		 }
+	 }
+} )

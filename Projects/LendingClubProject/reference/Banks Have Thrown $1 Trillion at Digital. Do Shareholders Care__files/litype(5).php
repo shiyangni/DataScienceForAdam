@@ -1,0 +1,1 @@
+window.advBidxc.doRefresh([true]);

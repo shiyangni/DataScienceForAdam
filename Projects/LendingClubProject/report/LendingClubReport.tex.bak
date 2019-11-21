@@ -1,0 +1,22 @@
+\documentclass[11pt]{article}
+\usepackage{csquotes}
+\renewcommand{\mkbegdispquote}[2]{\itshape}
+
+\title{Lending Club Project Report - TEMP}
+\author{Bilgen, Shiyang Ni}
+
+\begin{document}
+\maketitle
+
+\section{Background}
+
+\subsection{Digitized Lending and Automated Credit Assessment}
+
+A 2018 McKinsey report summarized the advantages of digital lending as follows:
+\begin{displayquote}
+"Faster credit decisions, vastly improved customer experience, 40 percent lower costs, and a more secure risk profile."
+\end{displayquote}
+
+No commercial bank wants to be a bystander in the digital-lending revolution. Indeed, the arms race towards digitization has accelerated: 
+
+\end{document}

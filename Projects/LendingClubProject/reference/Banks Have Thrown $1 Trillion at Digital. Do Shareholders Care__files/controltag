@@ -1,0 +1,81 @@
+
+
+
+
+/* ControlTag Loader for Yahoo! 5dee8669-db36-43f3-8434-b09cda785165 */
+(function(w, cs) {
+  
+  if (/Twitter for iPhone/.test(w.navigator.userAgent || '')) {
+    return;
+  }
+
+  var debugging = /kxdebug/.test(w.location);
+  var log = function() {
+    
+    debugging && w.console && w.console.log([].slice.call(arguments).join(' '));
+  };
+
+  var load = function(url, callback) {
+    log('Loading script from:', url);
+    var node = w.document.createElement('script');
+    node.async = true;  
+    node.src = url;
+
+    
+    node.onload = node.onreadystatechange = function () {
+      var state = node.readyState;
+      if (!callback.done && (!state || /loaded|complete/.test(state))) {
+        log('Script loaded from:', url);
+        callback.done = true;  
+        callback();
+      }
+    };
+
+    
+    var sibling = w.document.getElementsByTagName('script')[0];
+    sibling.parentNode.insertBefore(node, sibling);
+  };
+
+  var config = {"app":{"name":"krux-scala-config-webservice","version":"3.41.5","schema_version":3},"confid":"qygrk9qlk","context_terms":[],"publisher":{"name":"Yahoo!","active":true,"uuid":"5dee8669-db36-43f3-8434-b09cda785165","version_bucket":"stable","id":1960},"params":{"first_party_dmp_managed":true,"link_header_bidder":false,"site_level_supertag_config":"site","recommend":false,"control_tag_pixel_throttle":100,"fingerprint":false,"optout_button_optout_text":"Browser Opt Out","channel":"display","user_data_timing":"load","consent_active":true,"use_central_usermatch":true,"store_realtime_segments":false,"tag_source":false,"link_hb_start_event":"ready","optout_button_optin_text":"Browser Opt In","first_party_uid":true,"dcm_profile_ids":"2492624","link_hb_timeout":2000,"link_hb_adserver_subordinate":true,"optimize_realtime_segments":false,"link_hb_adserver":"dfp","client_type":"marketer","target_fingerprint":false,"context_terms":false,"optout_button_id":"kx-optout-button","dfp_premium":true,"control_tag_namespace":"yahoo"},"prioritized_segments":[],"realtime_segments":[],"services":{"userdata":"//cdn.krxd.net/userdata/get","contentConnector":"https://connector.krxd.net/content_connector","stats":"//apiservices.krxd.net/stats","optout":"//cdn.krxd.net/userdata/optout/status","event":"//beacon.krxd.net/event.gif","set_optout":"https://consumer.krxd.net/consumer/optout","data":"//beacon.krxd.net/data.gif","link_hb_stats":"//beacon.krxd.net/link_bidder_stats.gif","userData":"//cdn.krxd.net/userdata/get","link_hb_mas":"https://link.krxd.net/hb","config":"//cdn.krxd.net/controltag/{{ confid }}.js","social":"//beacon.krxd.net/social.gif","addSegment":"//cdn.krxd.net/userdata/add","pixel":"//beacon.krxd.net/pixel.gif","um":"https://usermatch.krxd.net/um/v2","controltag":"//cdn.krxd.net/ctjs/controltag.js.{hash}","loopback":"https://consumer.krxd.net/consumer/tmp_cookie","remove":"https://consumer.krxd.net/consumer/remove/5dee8669-db36-43f3-8434-b09cda785165","click":"https://apiservices.krxd.net/click_tracker/track","stats_export":"//beacon.krxd.net/controltag_stats.gif","userdataApi":"//cdn.krxd.net/userdata/v1/segments/get","cookie":"//beacon.krxd.net/cookie2json","proxy":"//cdn.krxd.net/partnerjs/xdi","consent_get":"https://consumer.krxd.net/consent/get/5dee8669-db36-43f3-8434-b09cda785165","consent_set":"https://consumer.krxd.net/consent/set/5dee8669-db36-43f3-8434-b09cda785165","is_optout":"https://beacon.krxd.net/optout_check","impression":"//beacon.krxd.net/ad_impression.gif","transaction":"//beacon.krxd.net/transaction.gif","log":"//jslog.krxd.net/jslog.gif","portability":"https://consumer.krxd.net/consumer/portability/5dee8669-db36-43f3-8434-b09cda785165","set_optin":"https://consumer.krxd.net/consumer/optin","usermatch":"//beacon.krxd.net/usermatch.gif"},"experiments":[],"site":{"name":"Yahoo Display Media Tag","cap":2,"id":1482882,"organization_id":1960,"uid":"qygrk9qlk"},"tags":[],"usermatch_tags":[{"id":6,"name":"Google User Match","content":"<script>\n(function() {\n  if (Krux('get', 'user') != null) {\n      new Image().src = 'https://usermatch.krxd.net/um/v2?partner=google';\n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":15,"name":"TheTradeDesk User Match","content":"<script>\r\n(function(){\r\nvar kuid = Krux('get', 'user');\r\nvar consent = Krux('iab:urlParams');\r\nif (kuid) {\r\nif(!consent){\r\nconsent = \"\";\r\n}\r\nvar p = location.protocol == 'https:' ? 'https:' : 'http:';\r\nvar purl = '//match.adsrvr.org/track/cmf/generic?ttd_pid=krux&ttd_tpi=1';\r\n(new Image()).src  = p + purl + consent; \r\n}\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":25,"name":"eXelate Media","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  if (kuid) {\r\n    Krux('require:http').pixel({\r\n      url: \"//loadm.exelator.com/load\",\r\n      data: {\r\n          _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',\r\n          buid: kuid,\r\n          p: '204',\r\n          g: '270',\r\n          j: '0'\r\n      }});\r\n  }\r\n  })();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":64,"name":"AOL User Match","content":"<script>\n(function(){\n    var kuid = Krux('get', 'user');\n    if (kuid) {\n        new Image().src = location.protocol + \"//pixel.advertising.com/ups/364/sync?uid=\" + kuid + \"&_origin=1&redir=true\";\n    }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":71,"name":"AppNexus Connect","content":"<script>\r\n(function(){\r\n        var kuid = Krux('get', 'user');\r\n        if (kuid) {\r\n            var prefix = location.protocol == 'https:' ? \"https:\" : \"http:\";\r\n            var kurl = prefix + '//beacon.krxd.net/usermatch.gif?adnxs_uid=$UID';\r\n            var appnexus_url = '//ib.adnxs.com/getuid?' + kurl\r\n            var i = new Image();\r\n            i.src = appnexus_url;\r\n        }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":76,"name":"LiveRamp User Matching","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  if (kuid) {\r\n      var liveramp_url = 'https://idsync.rlcdn.com/379708.gif?partner_uid=' + kuid;\r\n      var i = new Image();\r\n      i.src = liveramp_url;     \r\n  }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":86,"name":"Neustar AdAdvisor S2S","content":"<script>\r\n(function(){\r\nvar kuid = Krux('get', 'user');\r\nvar prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\r\nif (kuid) {\r\n    new Image().src = prefix + '//aa.agkn.com/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e';\r\n     }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":9,"name":"RocketFuel User Match","content":"<script>\r\n(function() {\r\n    var i = new Image();\r\n    i.src = '//p.rfihub.com/cm?in=1&pub=6919';\r\n})();\r\n\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":17,"name":"Twitter User Match","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n      var url =\n\"https://analytics.twitter.com/i/adsct?p_user_id=\" + kuid +\n\"&p_id=10623\";\n      var i = new Image();\n      i.src = url;     \n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":20,"name":"Yahoo! DataX User Match","content":"<script>\r\n(function(){\r\n    var kuid = Krux('get', 'user');\r\n        if (kuid) {\r\n            var prefix = 'https:';\r\n            var rurl = prefix + '//cms.analytics.yahoo.com/cms?partner_id=KRUX';\r\n            var i = new Image();\r\n            i.src = rurl;\r\n        }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":28,"name":"Dstillery User Match","content":"<script>\n(function(){\n        var kuid = Krux('get', 'user');\n        var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\n        if (kuid) {\n        var url = prefix + '//idpix.media6degrees.com/orbserv/hbpix?pixId=30036&pcv=27';\n        (new Image()).src = url;\n        }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":61,"name":"Adelphic User Match","content":"<script>\n(function(){\n\tnew Image().src = '//sync.ipredictive.com/d/sync/cookie/generic?https://beacon.krxd.net/usermatch.gif?partner=adelphic&partner_uid=${ADELPHIC_CUID}'\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":3,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":68,"name":"IgnitionOne Usermatch","content":"<script>\n    !function(){\n        (new Image()).src = 'https://krux2waycm.netmng.com/cm/';\n    }();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":3,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":79,"name":"Quantcast S2S User Match","content":"<script>\r\n(function(){\r\n        var kuid = Krux('get', 'user');\r\n        if (kuid) {\r\n           var qcast_url = 'https://pixel.quantserve.com/pixel/p-j_f_9hh7_PWUw.gif?idmatch=0';\r\n           var i = new Image();\r\n           i.src = qcast_url;\r\n        }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":3,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true}],"link":{"adslots":{},"bidders":{}}};
+  
+  for (var i = 0, tags = config.tags, len = tags.length, tag; (tag = tags[i]); ++i) {
+    if (String(tag.id) in cs) {
+      tag.content = cs[tag.id];
+    }
+  }
+
+  
+  var esiGeo = String(function(){/*
+   <esi:include src="/geoip_esi"/>
+  */}).replace(/^.*\/\*[^{]+|[^}]+\*\/.*$/g, '');
+
+  if (esiGeo) {
+    log('Got a request for:', esiGeo, 'adding geo to config.');
+    try {
+      config.geo = w.JSON.parse(esiGeo);
+    } catch (__) {
+      
+      log('Unable to parse geo from:', config.geo);
+      config.geo = {};
+    }
+  }
+
+
+
+  var proxy = (window.Krux && window.Krux.q && window.Krux.q[0] && window.Krux.q[0][0] === 'proxy');
+
+  if (!proxy || true) {
+    
+
+  load('//cdn.krxd.net/ctjs/controltag.js.05f9d0dad02f8a1b0b028b868bc3a3e2', function() {
+    log('Loaded stable controltag resource');
+    Krux('config', config);
+  });
+
+  }
+
+})(window, (function() {
+  var obj = {};
+  
+  return obj;
+})());
