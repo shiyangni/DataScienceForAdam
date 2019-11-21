@@ -1,5 +1,6 @@
-\documentclass[11pt]{article}
+\documentclass[11pt, twocolumn]{article}
 \usepackage{csquotes}
+\usepackage{hyperref}
 \renewcommand{\mkbegdispquote}[2]{\itshape}
 
 \title{Lending Club Project Report - TEMP}
@@ -10,13 +11,20 @@
 
 \section{Background}
 
-\subsection{Digitized Lending and Automated Credit Assessment}
+\subsection{Automation in Lending}
 
-A 2018 McKinsey report summarized the advantages of digital lending as follows:
+A 2018 McKinsey\footnote{McKinsey: \textit{The Lending Revolution} } report summarized the advantages of digital lending as follows:
 \begin{displayquote}
-"Faster credit decisions, vastly improved customer experience, 40 percent lower costs, and a more secure risk profile."
+Faster credit decisions, vastly improved customer experience, 40 percent lower costs, and a more secure risk profile.
 \end{displayquote}
 
-No commercial bank wants to be a bystander in the digital-lending revolution. Indeed, the arms race towards digitization has accelerated: 
+No bank wants to be a bystander to the enormous potential unlocked by digitization. Indeed, the arms race has accelerated: banks around the globe have pumped more than 1 trillion dollars into technology in the last four years.\footnote{Forbes: \textit{Banks Have Thrown In \$1 Trillion Dollars Should Investors Care}} In Europe, top contenders are actively partnering up with fin-techs to streamline their risk and operational procedures. In China, Ping An, a once traditional insurance company, is investing \$1 billion a year in technology innovation. It has spun-off several major platforms in its IPO that focus on applying innovative technology to fast-growing fields such as peer-to-peer energy trading and auto-loans\footnote{BCG: \textit{The Race For
+Relevance and Scale}}.  
+
+Some banks have seen return on their investment. According to the McKinsey report, ``one large European bank increased win rates by a third and average margins by over 50 percent as a result of slashing its time to yes on small- and medium-enterprise (SME) lending from 20 days to less than ten minutes." Another Scandinavian bank has introduced a loan application interface that be shared between its Relationship Manager(RM) and the client. Through the interface an RM can demonstrate the work-flow of digitized credit approval and get real-time feedback from the automated risk-assessment scheme. The innovation has enabled RMs to make loan decisions in five to ten minutes three quarters of the time, and more complex cases are mostly decided within 90 minutes. 
+
+While most banks are still unclear what they would get out of their investment\footnote{Reuters: \textit{Bank Investments in Technology not yet driving significant revenue growth: Accenture}}, the pressure to invest in technology isn't going away. As can be seen from the examples above, successful adoption of automation brings such huge competitive edge in cost control and customer experience, that winners might completely outpace competitions. Threat of new entrants is also getting real: big techs around the globe are vying for the retail lending market, leveraging their enormous customer base and expertise in optimizing user experience. Boston Consulting Group even went so far as to call digitization a matter of "an existential threat" for commercial banks.
+
+Given this background, the question of where banks can apply automation should be of interest. This project explores one 
 
 \end{document}
