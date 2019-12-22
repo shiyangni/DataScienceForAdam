@@ -63,5 +63,20 @@ Eigen::MatrixXd numericDiff(Eigen::VectorXd input, Eigen::VectorXd func(VectorXd
 	return result;
 }
 
+double identity(double x)
+{
+	return x;
+}
+
+double bentIdentity(double x)
+{
+	return (sqrt(pow(x,2) + 1) - 1) / 2 + x;
+}
+
+double sigmoid(double x)
+{
+	return 1 / (1 + exp(-x));
+}
+
 
 

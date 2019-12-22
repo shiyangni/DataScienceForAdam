@@ -12,9 +12,15 @@ OutputLayer::OutputLayer(int numberInputs)
 
 void OutputLayer::calcOutput()
 {
-	int numRows = getInput().rows();
+	VectorXd result = calcOutputFromInput(getInput());
+	setOutput(result);
+}
+
+Eigen::VectorXd OutputLayer::calcOutputFromInput(VectorXd input)
+{
+	int numRows = input.rows();
 	VectorXd ones(numRows);
 	ones.fill(1);
-	MatrixXd result = ones.transpose() * getInput();
-	setOutput(result);
+	VectorXd result = ones.transpose() * input;
+	return result;
 }

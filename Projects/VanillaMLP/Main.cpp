@@ -72,12 +72,13 @@ int main() {
 
 	cout << "The element at Row 4 Column 0 is 550000. Did we get it right?" << endl;
 	cout << "That element in the read in result is: " << temp.at(4).at(0) << endl;
-	cout << "We got both of them right!" << endl;
+	cout << "We got both of them right! \n \n \n" << endl;
+
 
 	/*Testing reading data in.*/
 	cout << "Let's see if the readCSV function works!" << endl;
 	cout << readCSV("data_fake.csv") << endl;
-
+	cout << "Read CSV function works as intended. \n\n" << endl;
 
 	/*Testing how the Eigen::Matrix works. */
 	/*Assignment of a subset deep copies? Yes.*/
@@ -93,61 +94,69 @@ int main() {
 
 
 	/*Testing for Model.h*/
+	Model emptyModel;
+	MatrixXd data_train = readCSV("data.csv");
+
 	//cout << "Begin testing Model" << endl;
 	///*Test the default constructor of Model.*/
 	//cout << "Testing the default constructor Model." << endl;
-	//Model emptyModel;
+
 	//cout << "data in the empty model is: \n" << emptyModel.getDataTrain() << endl;
 	//cout << "The X_train is: \n " << emptyModel.getXTrain() << endl;
 	//cout << "The y_train is: \n " << emptyModel.getYTrain() << endl;
-
+	//cout << "This is exactly the data in data_fake.csv! \n\n" << endl;
 
 	///*Testing the initiation of a model with an inputLayer.*/
 	//cout << "Testing the initiation of a model with an inputLayer." << endl;
-	//MatrixXd data_train = readCSV("data.csv");
+
  //	Model dataModel(data_train);
 	//cout << "Our data has " << data_train.cols() - 1 << " features." << endl;
 	//cout << "After adding the input layer, the input layer has " << dataModel.getLayer(0).getNumInputs()
 	//	<< " inputs" << endl;
-	//
+	//cout << "Model initiation works fine! \n\n" << endl;
 
-	///*Testing for Layer.h and subclasses.*/
-	//cout << "Begin Testing for Layer.h and subclasses" << endl;
-	///*Layer*/
-	///*Test if readInput(...) works properly.*/
-	//cout << "Test if readInput(...) works properly at a general layer." << endl;
-	//VectorXd sample_x = emptyModel.getXTrain().row(0).transpose();
-	//Layer generalLayer(sample_x.rows(), 5); // numInputs should match the inputting vector's dimension.
-	//										// numOutputs is randomly assigned.
-	//generalLayer.readInput(sample_x);
-	//cout << "Our sample input is supposed to be: \n" << sample_x << endl;
-	//cout << "In the general layer, the read-in input is: \n" << generalLayer.getInput() << endl;
-	//generalLayer.calcOutput();
+	/*Testing for Layer.h and subclasses.*/
+	cout << "Testing for Layer and its subclasses" << endl;
+	/*Layer*/
+	/*Test if readInput(...) works properly.*/
+	cout << "Test if readInput(...) works properly at a general layer." << endl;
+	VectorXd sample_x = emptyModel.getXTrain().row(0).transpose();
+	Layer generalLayer(sample_x.rows(), 5); // numInputs should match the inputting vector's dimension.
+											// numOutputs is randomly assigned.
+	generalLayer.readInput(sample_x);
+	cout << "Our sample input is supposed to be: \n" << sample_x << endl;
+	cout << "In the general layer, the read-in input is: \n" << generalLayer.getInput() << endl;
+	generalLayer.calcOutput();
+	cout << "This concludes testing for a generic layer. \n \n" << endl;
 
+	/*InputLayer*/
+	/*Testing if readInput and calcOutput works properly for an InputLayer.*/
+	cout << "Testing if readInput and calcOutput works properly for an InputLayer." << endl;
+	cout << "Our sample input is supposed to be: \n" << sample_x << endl;
+	InputLayer inputLayer1(sample_x.rows());// numInputs should match the inputting vector's dimension.
+											   // numOutputs is randomly assigned.
+	inputLayer1.readInput(sample_x);
+	inputLayer1.calcOutput();
+	cout << "In the input layer, the input is now: \n" << inputLayer1.getInput() << endl;
+	cout << "In the input layer, the output is now \n" << inputLayer1.getOutput() << endl;
+	cout << "This concludes testing for input layer \n\n" << endl;
 
-	///*InputLayer*/
-	///*Testing if readInput and calcOutput works properly for an InputLayer.*/
-	//cout << "Testing if readInput and calcOutput works properly for an InputLayer." << endl;
-	//cout << "Our sample input is supposed to be: \n" << sample_x << endl;
-	//InputLayer inputLayer1(sample_x.rows());// numInputs should match the inputting vector's dimension.
-	//										   // numOutputs is randomly assigned.
-	//inputLayer1.readInput(sample_x);
-	//inputLayer1.calcOutput();
-	//cout << "In the input layer, the input is now: \n" << inputLayer1.getInput() << endl;
-	//cout << "In the input layer, the output is now \n" << inputLayer1.getOutput() << endl;
-
-	///*OutputLayer*/
-	///*Testing calcOutput for Output Layer.*/
-	//cout << "Testing calcOutput for Output Layer." << endl;
-	//OutputLayer outputLayer1(sample_x.rows());
-	//outputLayer1.readInput(sample_x);
-	//outputLayer1.calcOutput();
-	//cout << "The output layer should add all inputs and return it as a 1x1 matrix. \n"
-	//	"Our output layer outputs: " << outputLayer1.getOutput() << endl;
+	/*OutputLayer*/
+	/*Testing calcOutput for Output Layer.*/
+	cout << "Testing calcOutput for Output Layer." << endl;
+	OutputLayer outputLayer1(sample_x.rows());
+	outputLayer1.readInput(sample_x);
+	outputLayer1.calcOutput();
+	cout << "The output layer should add all inputs and return it as a 1x1 matrix. \n"
+		"Our output layer outputs: " << outputLayer1.getOutput() << endl;
+	cout << "This concludes testing for output layer \n\n" << endl;
+	
+	
 	
 	/*Testing utitlities.*/
+	cout << "Testing the utilities funcitons. Note they don't belong to any classes." << endl;
 	/*Testing numericDiff.*/
-	cout << "Testing nuermic differentiation." << endl;
+	/*cout << "Testing nuermic differentiation." << endl;
 	VectorXd testVec = VectorXd::Ones(3);
 	cout << "The input is \n" << testVec << endl;
 	cout << "Our function maps the testVec to \n" << testMap(testVec) << endl;
@@ -167,7 +176,8 @@ int main() {
 	cout << "The calculated Jacobian is supposed to be \n"
 		"2   1    1/2    1/4 \n"
 		"1/8 1/4  1/2    1   \n" << endl;
-	cout << "It actually is \n" << numericDiff(testVec3, testMap3) << endl;
+	cout << "It actually is \n" << numericDiff(testVec3, testMap3) << endl;*/
 		
+	cout << "This concludes testing for utility functions. \n\n" << endl;
 	return 0;
 }
